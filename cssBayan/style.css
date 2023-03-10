@@ -6,6 +6,14 @@ body {
   width: 60%;
   margin: 20px auto;
 }
+input {
+  display: none;
+}
+
+img {
+  width: 500px;
+  margin: 20px;
+}
 .bayan-container .bayan-body {
   display: none;
   justify-content: center;
@@ -20,15 +28,14 @@ body {
 .bayan-item:hover > .bayan-body {
   display: flex;
 }
-img {
-  width: 500px;
-  margin: 20px;
-}
-input {
-  display: none;
-}
 input:checked + label + .bayan-body {
   display: flex;
+}
+input:checked + label > .bayan-btn {
+  transform: rotate(45deg);
+}
+.bayan-item:hover > label > .bayan-btn {
+  transform: rotate(45deg);
 }
 .bayan-item {
   border: 1px solid red;
