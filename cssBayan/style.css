@@ -3,22 +3,41 @@ body {
   justify-content: center;
 }
 .bayan-container {
-  width: 80%;
-  margin: 20px 0;
+  width: 60%;
+  margin: 20px auto;
 }
 .bayan-container .bayan-body {
-  display: flex;
-  height: 20px;
+  display: none;
   justify-content: center;
-  width: 100%;
+  padding: 0 30px;
+  transition: color 0.5s, padding 0.5s;
   border: 1px solid grey;
   margin: 0 auto;
 }
-label:hover,
 .bayan-body:hover {
-  height: fit-content;
+  display: flex;
+}
+.bayan-item:hover > .bayan-body {
+  display: flex;
 }
 img {
   width: 500px;
   margin: 20px;
+}
+input {
+  display: none;
+}
+input:checked + label + .bayan-body {
+  display: flex;
+}
+.bayan-item {
+  border: 1px solid red;
+}
+.bayan-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+span {
+  padding: 10px;
 }
