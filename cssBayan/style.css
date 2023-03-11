@@ -1,0 +1,146 @@
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(
+    circle,
+    rgba(255, 219, 219, 1) 15%,
+    rgba(198, 255, 245, 1) 73%,
+    rgba(254, 255, 220, 1) 100%
+  );
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2rem;
+}
+
+.bayan-container {
+  width: 60%;
+  margin: 2vw auto;
+}
+input {
+  display: none;
+}
+
+img {
+  width: 30vw;
+  margin: 2vw;
+}
+
+span {
+  height: fit-content;
+  align-self: center;
+  padding: 0 1vw;
+}
+.bayan-btn {
+  visibility: hidden;
+  font-size: 2.5rem;
+}
+.bayan-body {
+  display: none;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+input:checked + label > .bayan-body {
+  display: flex;
+  opacity: 0;
+  animation: ani 1s forwards;
+}
+
+input:checked + label > .bayan-title__container > .bayan-btn {
+  transform: rotate(45deg);
+  transition: transform 0.3s;
+}
+
+.bayan-item {
+  border: 0.01vw solid rgb(41, 41, 43);
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 52px -10px rgba(0, 59, 105, 0.31) inset;
+  -moz-box-shadow: 0px 0px 52px -10px rgba(0, 59, 105, 0.31) inset;
+  box-shadow: 0px 0px 52px -10px rgba(0, 59, 105, 0.31) inset;
+}
+.bayan-title__container {
+  display: flex;
+  width: 100%;
+  max-height: fit-content;
+  justify-content: space-between;
+  border: 0.01vw solid rgb(41, 41, 43);
+}
+
+input:checked + label {
+  background: rgba(255, 219, 219);
+  transition: any 0.9s;
+}
+@media (hover: hover) {
+  .bayan-body:active,
+  .bayan-title:active {
+    cursor: url("../assets/free-icon-circle-4302702.png"), pointer;
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+  .bayan-btn:hover {
+    cursor: url("../assets/free-icon-circle-4302702.png"), pointer;
+  }
+  .bayan-btn:active {
+    cursor: wait;
+  }
+  .bayan-body:hover,
+  .bayan-item:hover > label > .bayan-body,
+  input:checked + label > .bayan-body {
+    display: flex;
+    opacity: 0;
+    animation: ani 1s forwards;
+  }
+  .bayan-item:hover > label > .bayan-title__container > .bayan-btn {
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+  }
+  .bayan-item:hover > label {
+    background: rgba(255, 219, 219);
+    transition: any 0.9s;
+  }
+  .bayan-container:hover
+    > .bayan-item
+    > .bayan-title
+    > .bayan-title__container
+    > .bayan-btn {
+    visibility: visible;
+  }
+}
+@media (max-width: 819.98px) {
+  body {
+    font-size: 1.5rem;
+  }
+  .bayan-container {
+    width: 90%;
+  }
+  img {
+    width: 60vw;
+  }
+  .bayan-btn {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 319.98px) {
+  body {
+    font-size: 1rem;
+  }
+  .bayan-container {
+    width: 96%;
+  }
+  img {
+    width: 70vw;
+  }
+  .bayan-btn {
+    font-size: 1rem;
+  }
+}
