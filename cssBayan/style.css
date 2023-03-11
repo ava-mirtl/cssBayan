@@ -17,7 +17,7 @@ body {
     rgba(254, 255, 220, 1) 100%
   );
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .bayan-container {
@@ -36,9 +36,11 @@ img {
 span {
   height: fit-content;
   align-self: center;
+  padding: 0 1vw;
 }
 .bayan-btn {
   visibility: hidden;
+  font-size: 2.5rem;
 }
 .bayan-body {
   display: none;
@@ -52,9 +54,6 @@ input:checked + label > .bayan-body {
   animation: ani 1s forwards;
 }
 
-.bayan-btn {
-  font-size: 2.5rem;
-}
 input:checked + label > .bayan-title__container > .bayan-btn {
   transform: rotate(45deg);
   transition: transform 0.3s;
@@ -70,17 +69,16 @@ input:checked + label > .bayan-title__container > .bayan-btn {
 .bayan-title__container {
   display: flex;
   width: 100%;
+  max-height: fit-content;
   justify-content: space-between;
   border: 0.01vw solid rgb(41, 41, 43);
 }
-span {
-  padding: 1vw;
-}
+
 input:checked + label {
   background: rgba(255, 219, 219);
   transition: any 0.9s;
 }
-@media (min-width: 320px) {
+@media (hover: hover) {
   .bayan-body:active,
   .bayan-title:active {
     cursor: url("../assets/free-icon-circle-4302702.png"), pointer;
@@ -89,7 +87,12 @@ input:checked + label {
   label:hover {
     cursor: pointer;
   }
-
+  .bayan-btn:hover {
+    cursor: url("../assets/free-icon-circle-4302702.png"), pointer;
+  }
+  .bayan-btn:active {
+    cursor: wait;
+  }
   .bayan-body:hover,
   .bayan-item:hover > label > .bayan-body,
   input:checked + label > .bayan-body {
@@ -115,7 +118,7 @@ input:checked + label {
 }
 @media (max-width: 819.98px) {
   body {
-    font-size: 4vw;
+    font-size: 1.5rem;
   }
   .bayan-container {
     width: 90%;
@@ -124,12 +127,12 @@ input:checked + label {
     width: 60vw;
   }
   .bayan-btn {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 319.98px) {
   body {
-    font-size: 3vw;
+    font-size: 1rem;
   }
   .bayan-container {
     width: 96%;
