@@ -39,19 +39,18 @@ span {
 .bayan-btn {
   visibility: hidden;
 }
-.bayan-container .bayan-body {
+.bayan-body {
   display: none;
   justify-content: center;
   margin: 0 auto;
 }
-.bayan-body:hover,
 label:hover {
   cursor: pointer;
 }
 
 .bayan-body:hover,
-.bayan-item:hover > .bayan-body,
-input:checked + label + .bayan-body {
+.bayan-item:hover > label > .bayan-body,
+input:checked + label > .bayan-body {
   display: flex;
   opacity: 0;
   animation: ani 1s forwards;
@@ -60,12 +59,16 @@ input:checked + label + .bayan-body {
 .bayan-btn {
   font-size: 2.5rem;
 }
-input:checked + label > .bayan-btn,
-.bayan-item:hover > label > .bayan-btn {
+input:checked + label > .bayan-title__container > .bayan-btn,
+.bayan-item:hover > label > .bayan-title__container > .bayan-btn {
   transform: rotate(45deg);
   transition: transform 0.3s;
 }
-.bayan-container:hover > .bayan-item > .bayan-title > .bayan-btn {
+.bayan-container:hover
+  > .bayan-item
+  > .bayan-title
+  > .bayan-title__container
+  > .bayan-btn {
   visibility: visible;
 }
 .bayan-item {
@@ -75,7 +78,7 @@ input:checked + label > .bayan-btn,
   -moz-box-shadow: 0px 0px 52px -10px rgba(0, 59, 105, 0.31) inset;
   box-shadow: 0px 0px 52px -10px rgba(0, 59, 105, 0.31) inset;
 }
-.bayan-title {
+.bayan-title__container {
   display: flex;
   width: 100%;
   justify-content: space-between;
