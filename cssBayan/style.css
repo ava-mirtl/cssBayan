@@ -46,17 +46,6 @@ span {
   margin: 0 auto;
 }
 
-.bayan-body:active,
-.bayan-title:active {
-  cursor: url("../assets/free-icon-circle-4302702.png"), pointer;
-}
-
-label:hover {
-  cursor: pointer;
-}
-
-.bayan-body:hover,
-.bayan-item:hover > label > .bayan-body,
 input:checked + label > .bayan-body {
   display: flex;
   opacity: 0;
@@ -66,18 +55,11 @@ input:checked + label > .bayan-body {
 .bayan-btn {
   font-size: 2.5rem;
 }
-input:checked + label > .bayan-title__container > .bayan-btn,
-.bayan-item:hover > label > .bayan-title__container > .bayan-btn {
+input:checked + label > .bayan-title__container > .bayan-btn {
   transform: rotate(45deg);
   transition: transform 0.3s;
 }
-.bayan-container:hover
-  > .bayan-item
-  > .bayan-title
-  > .bayan-title__container
-  > .bayan-btn {
-  visibility: visible;
-}
+
 .bayan-item {
   border: 0.01vw solid rgb(41, 41, 43);
   margin: 10px;
@@ -94,10 +76,42 @@ input:checked + label > .bayan-title__container > .bayan-btn,
 span {
   padding: 1vw;
 }
-input:checked + label,
-.bayan-item:hover > label {
+input:checked + label {
   background: rgba(255, 219, 219);
   transition: any 0.9s;
+}
+@media (min-width: 320px) {
+  .bayan-body:active,
+  .bayan-title:active {
+    cursor: url("../assets/free-icon-circle-4302702.png"), pointer;
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+
+  .bayan-body:hover,
+  .bayan-item:hover > label > .bayan-body,
+  input:checked + label > .bayan-body {
+    display: flex;
+    opacity: 0;
+    animation: ani 1s forwards;
+  }
+  .bayan-item:hover > label > .bayan-title__container > .bayan-btn {
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+  }
+  .bayan-item:hover > label {
+    background: rgba(255, 219, 219);
+    transition: any 0.9s;
+  }
+  .bayan-container:hover
+    > .bayan-item
+    > .bayan-title
+    > .bayan-title__container
+    > .bayan-btn {
+    visibility: visible;
+  }
 }
 @media (max-width: 819.98px) {
   body {
@@ -113,7 +127,7 @@ input:checked + label,
     font-size: 2rem;
   }
 }
-@media (max-width: 329.98px) {
+@media (max-width: 319.98px) {
   body {
     font-size: 3vw;
   }
@@ -125,32 +139,5 @@ input:checked + label,
   }
   .bayan-btn {
     font-size: 1rem;
-  }
-  .bayan-item:hover > label {
-    background: inherit;
-  }
-  .bayan-container:hover
-    > .bayan-item
-    > .bayan-title
-    > .bayan-title__container
-    > .bayan-btn {
-    visibility: hidden;
-  }
-  .bayan-item:hover > label > .bayan-title__container > .bayan-btn {
-    transform: none;
-  }
-  .bayan-body:active,
-  .bayan-title:active {
-    cursor: default;
-  }
-
-  .bayan-item:hover > label > .bayan-title__container > .bayan-btn {
-    transform: none;
-  }
-
-  .bayan-body:hover,
-  .bayan-item:hover > label > .bayan-body {
-    display: none;
-    animation: none;
   }
 }
