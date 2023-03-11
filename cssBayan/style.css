@@ -32,6 +32,7 @@ img {
   width: 30vw;
   margin: 2vw;
 }
+
 span {
   height: fit-content;
   align-self: center;
@@ -44,6 +45,12 @@ span {
   justify-content: center;
   margin: 0 auto;
 }
+
+.bayan-body:active,
+.bayan-title:active {
+  cursor: url("../assets/free-icon-circle-4302702.png"), pointer;
+}
+
 label:hover {
   cursor: pointer;
 }
@@ -118,5 +125,32 @@ input:checked + label,
   }
   .bayan-btn {
     font-size: 1rem;
+  }
+  .bayan-item:hover > label {
+    background: inherit;
+  }
+  .bayan-container:hover
+    > .bayan-item
+    > .bayan-title
+    > .bayan-title__container
+    > .bayan-btn {
+    visibility: hidden;
+  }
+  .bayan-item:hover > label > .bayan-title__container > .bayan-btn {
+    transform: none;
+  }
+  .bayan-body:active,
+  .bayan-title:active {
+    cursor: default;
+  }
+
+  .bayan-item:hover > label > .bayan-title__container > .bayan-btn {
+    transform: none;
+  }
+
+  .bayan-body:hover,
+  .bayan-item:hover > label > .bayan-body {
+    display: none;
+    animation: none;
   }
 }
